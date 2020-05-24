@@ -31,8 +31,6 @@
 }
 
 
-
-
 /***************** 这里定义一些全局信息****************/
 
 html,
@@ -258,6 +256,7 @@ a {
 }
 */
 
+
 /***************** 这里定义YAML头部的样式 ****************/
 
 #write pre.md-meta-block {
@@ -280,8 +279,8 @@ code {
     padding: .1rem;
     background: #f0f0f0;
     font-size: 0.9rem;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
 }
 
 .md-fences {
@@ -291,7 +290,7 @@ code {
     border-radius: 3px;
     padding: 0;
     padding: 2px 4px 0px 4px;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     margin-bottom: 15px;
     margin-top: 15px;
     padding-top: 8px;
@@ -375,7 +374,9 @@ code {
     display: none;
 }
 
+
 /***************** 这里定义标题的样式 ****************/
+
 #write h1,
 #write h2,
 #write h3,
@@ -387,28 +388,32 @@ code {
 }
 
 #write h1 {
-    font-weight: 100;
     font-size: 1.5rem;
     color: black;
     text-align: center;
-    margin-bottom: 1.5rem;
     margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 #write h2 {
     font-size: 1.3rem;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 #write h3 {
     color: brown;
     font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 #write h4 {
     color: black;
     font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     padding-left: 0.75rem;
     border-left: 0.75rem solid #666;
 }
@@ -416,7 +421,8 @@ code {
 #write h5 {
     color: black;
     font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     padding-left: 0.75rem;
     border-left: 1rem solid #666;
 }
@@ -424,7 +430,8 @@ code {
 #write h6 {
     color: black;
     font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     padding-left: 0.75rem;
     border-left: 1.25rem solid #666;
 }
@@ -432,28 +439,41 @@ code {
 
 /***************** 这里定义列表的样式 ****************/
 
-li {
+li p {
     font-family: 'Times New Roman', 宋体;
     font-size: 1rem;
     line-height: 1.75rem;
+    margin: 0.375rem;
 }
 
 ul,
 ol {
-    margin: 0 0 0.75rem 0;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+ol li {
+    list-style-type: decimal;
+    list-style-position: outside;
+}
+
+ul li {
+    list-style-type: square;
+    list-style-position: outside;
 }
 
 
 /***************** 这里定义段落的样式 ****************/
+
 p {
     font-family: 'Times New Roman', 宋体;
     font-size: 1rem;
     line-height: 1.75rem;
-    margin: 0 0 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 
 /***************** 这里定义图片的样式 ****************/
+
 img {
     margin: auto;
     display: block;
@@ -462,17 +482,22 @@ img {
 
 
 /***************** 这里定义引用的样式 ****************/
+
 blockquote {
     border-left: 5px solid #666;
     background-color: #f0f0f0;
+    margin-top: 0.75rem;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+    margin-bottom: 0.75rem;
 }
 
 blockquote p {
     font-family: 'Times New Roman', 宋体;
-    padding: 0.3rem 0.5rem;
+    padding: 0.25rem 0.5rem;
     font-size: 1rem;
     line-height: 1.75rem;
-    margin: 0 0 0 0;
+    margin: 0rem;
 }
 
 
