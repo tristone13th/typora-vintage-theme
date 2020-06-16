@@ -13,4 +13,4 @@
 
 ![](media/lorem_ipsum_3.png)
 
-![](media/haskell.png)
+![](media/abstract_algebra.png)
