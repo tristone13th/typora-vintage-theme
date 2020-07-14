@@ -328,7 +328,7 @@ code {
 .outline-item {
     font-family: 'Times New Roman', 黑体;
     font-size: 0.8rem;
-    line-height: 1;
+    line-height: 1.35;
 }
 
 .outline-h2 .outline-label,
@@ -447,12 +447,12 @@ code {
 /***************** 这里定义列表的样式 ****************/
 
 ol li {
-    list-style-type: decimal;
+    /*list-style-type: decimal;*/
     list-style-position: outside;
 }
 
 ul li {
-    list-style-type: "disc";
+    /*list-style-type: "disc";*/
     list-style-position: outside;
 }
 
