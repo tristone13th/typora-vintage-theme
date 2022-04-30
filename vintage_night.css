@@ -1,0 +1,738 @@
+:root {
+    --bg-color: #131313;
+    /*change background*/
+    --text-color: #eeffff;
+    /*change text color*/
+    --md-char-color: #C7C5C5;
+    /*change color of meta characetrs like `*` in markdown */
+    --meta-content-color: #5b808d;
+    /*change color of meta contents like image text or link address in markdown */
+
+    --primary-color: #428bca;
+    /* color of primary buttons */
+    --primary-btn-border-color: #285e8e;
+    --primary-btn-text-color: #eeffff;
+
+    --window-border: 1px solid #131313;
+    /*border for sidebar, etc*/
+
+    --active-file-bg-color: #333333;
+    /*background color if list item in file tree or file list*/
+    --active-file-text-color: inherit;
+    --active-file-border-color: #777;
+
+    --side-bar-bg-color: #222222;
+    /*change background of sidebar*/
+    --item-hover-bg-color: rgba(100, 100, 100, 0.59);
+    /*background of control items when hover, like menu in sidebar*/
+    --item-hover-text-color: inherit;
+    --monospace: monospace;
+    /*monospace font for codes, fences*/
+}
+
+
+/***************** 这里定义一些全局信息****************/
+
+html,
+body {
+    background: #131313;
+    font-family: 'Times New Roman', 宋体;
+    font-weight: normal;
+    max-width: 55rem;
+}
+
+#write {
+    background: #131313;
+    font-family: 'Times New Roman', 宋体;
+    font-weight: normal;
+    max-width: 55rem;
+    color: #eeffff
+}
+
+body {
+    margin: auto;
+}
+
+html {
+    font-size: 18px;
+}
+
+#write {
+    margin: auto;
+    text-align: justify;
+}
+
+
+/************************* misc ************************/
+
+::-webkit-scrollbar-thumb {
+    background-color: #888888;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #888888;
+}
+
+::selection {
+  color: #131313;
+  background: #ee8241;
+}
+
+div .long-btn {
+	color: #131313;
+}
+
+button .btn {
+	color: #131313;
+}
+
+tr {
+	color: #131313;
+}
+
+/***************** 这里定义水平线的样式 ****************/
+
+hr {
+    border: none;
+    border-top: 1px dashed #333;
+    color: #333;
+}
+
+/***************** 这里定义脚注的样式 ****************/
+
+#write sup[md-inline="footnote"] {
+    background-color: #131313;
+    color: #888888;
+    font-size: 0.8rem;
+    padding: 0;
+}
+
+#write sup[md-inline="footnote"]:before {
+    content: '[';
+}
+
+#write sup[md-inline="footnote"]:after {
+    content: ']';
+}
+
+
+/***************** 这里定义链接的样式 ****************/
+
+#write a {
+    color: #888888;
+}
+
+/***************** 这里定义ToC的样式 ****************/
+
+/* .md-toc-inner {
+    text-decoration: none;
+} */
+
+.md-toc-content {
+    font-family: 'Times New Roman', 宋体;
+    counter-reset: h1toc;
+}
+
+.md-toc-h1 {
+    font-family: 'Times New Roman', 黑体;
+    margin-left: 0;
+    font-size: 1rem;
+    counter-reset: h2toc;
+}
+
+.md-toc-h2 {
+    font-size: 1rem;
+    margin-left: 2rem;
+    counter-reset: h3toc;
+}
+
+.md-toc-h3 {
+    margin-left: 3rem;
+    font-size: 1rem;
+    counter-reset: h4toc;
+}
+
+.md-toc-h4 {
+    margin-left: 4rem;
+    font-size: 1rem;
+    counter-reset: h5toc;
+}
+
+.md-toc-h5 {
+    margin-left: 5rem;
+    font-size: 1rem;
+    counter-reset: h6toc;
+}
+
+.md-toc-h6 {
+    margin-left: 6rem;
+    font-size: 1rem;
+}
+
+.md-toc-h1:before {
+    color: #285e8e;
+    white-space: pre-wrap;
+    counter-increment: h1toc;
+    content: counter(h1toc) "  "
+}
+
+.md-toc-h1 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h2:before {
+    color: #285e8e;
+    white-space: pre-wrap;
+    counter-increment: h2toc;
+    content: counter(h1toc) ". "counter(h2toc) "  "
+}
+
+.md-toc-h2 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h3:before {
+    color: #285e8e;
+    white-space: pre-wrap;
+    counter-increment: h3toc;
+    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) "  "
+}
+
+.md-toc-h3 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h4:before {
+    color: #285e8e;
+    white-space: pre-wrap;
+    counter-increment: h4toc;
+    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) "  "
+}
+
+.md-toc-h4 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h5:before {
+    color: #285e8e;
+    white-space: pre-wrap;
+    counter-increment: h5toc;
+    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) ". "counter(h5toc) "  "
+}
+
+.md-toc-h5 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h6:before {
+    color: #285e8e;
+    white-space: pre-wrap;
+    counter-increment: h6toc;
+    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) ". "counter(h5toc) ". "counter(h6toc) "  "
+}
+
+.md-toc-h6 .md-toc-inner {
+    margin-left: 0;
+}
+
+
+/***************** 这里定义任务列表的样式 ****************/
+
+/* .task-list {
+    padding-left: 0;
+} */
+
+/* .md-task-list-item {
+    padding-left: 3rem;
+} */
+
+.md-task-list-item>input {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    -webkit-appearance: initial;
+    margin-left: -1.5rem;
+    margin-top: .375rem;
+    border: 0;
+}
+
+.md-task-list-item>input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.md-task-list-item>input:before {
+    border: 1px solid #555;
+    border-radius: calc(1rem);
+    width: calc(1rem);
+    height: calc(1rem);
+    background: #fff;
+    content: '';
+    transition: background-color 200ms ease-in-out;
+    display: block;
+}
+
+.md-task-list-item>input:checked:before,
+.md-task-list-item>input[checked]:before {
+    background: #333;
+    /* border-width: 1px; */
+    display: inline-block;
+    transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item>input:checked:after,
+.md-task-list-item>input[checked]:after {
+    opacity: 0;
+}
+
+.task-list-done {
+    /* styles for completed tasks */
+    text-decoration: line-through;
+}
+
+/* .task-list-not-done {
+    
+} */
+
+/*
+.md-task-list-item>input:after {
+    -webkit-transition: opacity 0.05s ease-in-out;
+    -moz-transition: opacity 0.05s ease-in-out;
+    transition: opacity 0.05s ease-in-out;
+    -webkit-transform: rotate(-50deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0.25rem;
+    left: 0.225rem;
+    width: 0.6rem;
+    height: 0.4rem;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    content: '\00a0';
+    opacity: 0;
+}
+*/
+
+
+/***************** 这里定义YAML头部的样式 ****************/
+
+#write pre.md-meta-block {
+    font-family: 'Times New Roman', 宋体;
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #303030;
+    border: 0;
+    border-radius: 3px;
+    color: #eeffff;
+    margin-top: 0 !important;
+}
+
+
+/***************** 这里定义代码的样式 ****************/
+#write span .cm-variable {
+	color: #eeffff;
+}
+
+#write span .cm-meta {
+	color: #f7397d;
+}
+
+#write span .cm-variable-3 {
+	color: #ee8241;
+}
+
+#write span .cm-keyword {
+	color: #f7397d;
+}
+
+#write span .cm-def {
+	color: #abd166;
+}
+
+#write span .cm-comment {
+	color: #c99677;
+}
+
+#write span .cm-string {
+	color: #c99677;
+}
+
+#write span .cm-operator {
+	color: #9cdcfe;
+}
+
+#write span .cm-number {
+	color: #b5cea8;
+}
+
+#write code {
+    font-family: 'UbuntuMono Nerd Font', 宋体;
+    padding: .1rem;
+    color: #eeffff;
+    background: #131313;
+    font-size: 0.9rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+}
+
+#write .md-fences {
+    font-family: 'UbuntuMono Nerd Font';
+    color: "#eeffff";
+    border: 1px solid #666;
+    background-color: #131313;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+/***************** 这里定义大纲的样式 ****************/
+
+.outline-item {
+    font-family: 'Times New Roman', 黑体;
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
+.outline-h2 .outline-label,
+.outline-h3 .outline-label,
+.outline-h4 .outline-label,
+.outline-h5 .outline-label,
+.outline-h6 .outline-label {
+    font-size: 0.7rem;
+}
+
+.sidebar-content {
+    counter-reset: toch1
+}
+
+.outline-h1 {
+    counter-reset: toch2
+}
+
+.outline-h2 {
+    counter-reset: toch3
+}
+
+.outline-h3 {
+    counter-reset: toch4
+}
+
+.outline-h4 {
+    counter-reset: toch5
+}
+
+.outline-h5 {
+    counter-reset: toch6
+}
+
+.outline-h1>.outline-item>.outline-label:before {
+    counter-increment: toch1;
+    content: counter(toch1) " "
+}
+
+.outline-h2>.outline-item>.outline-label:before {
+    counter-increment: toch2;
+    content: counter(toch1) "."counter(toch2) " "
+}
+
+.outline-h3>.outline-item>.outline-label:before {
+    counter-increment: toch3;
+    content: counter(toch1) "."counter(toch2) "."counter(toch3) " "
+}
+
+.outline-h4>.outline-item>.outline-label:before {
+    counter-increment: toch4;
+    content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) " "
+}
+
+.outline-h5>.outline-item>.outline-label:before {
+    counter-increment: toch5;
+    content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) "."counter(toch5) " "
+}
+
+.outline-h6>.outline-item>.outline-label:before {
+    counter-increment: toch6;
+    content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) "."counter(toch5) "."counter(toch6) " "
+}
+
+.outline-h4,
+.outline-h5,
+.outline-h6 {
+    display: none;
+}
+
+
+/***************** 这里定义标题的样式 ****************/
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    font-weight: normal;
+    font-family: 'Times New Roman', 黑体;
+}
+
+#write h1 {
+    font-size: 1.5rem;
+    font-family: 'Hevatica', 黑体;
+    color: #eeffff;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#write h2 {
+    font-family: 'Hevatica', 黑体;
+    font-size: 1.2rem;
+    color: #eeffff;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+#write h3 {
+    font-family: 'Hevatica', 黑体;
+    color: #ee8241;
+    font-size: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+#write h4,
+#write h5,
+#write h6 {
+    font-family: 'Hevatica', 黑体;
+    color: black;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/***************** 这里定义列表的样式 ****************/
+
+ol li {
+    /*list-style-type: decimal;*/
+    list-style-position: outside;
+}
+
+ul li {
+    /*list-style-type: "disc";*/
+    list-style-position: outside;
+}
+
+/*working for PDF both in marker and in text, for Typora only for marker*/
+li {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0.25rem;
+    font-family: 'Times New Roman', 宋体;
+}
+
+/*working for PDF nothing, for Typora only for text*/
+li p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0.25rem;
+    font-family: 'Times New Roman', 宋体;
+}
+
+ul,
+ol {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+
+/***************** 这里定义段落的样式 ****************/
+
+p {
+    font-family: 'Times New Roman', 宋体;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+
+/***************** 这里定义图片的样式 ****************/
+
+img {
+    margin: auto;
+    display: block;
+}
+
+
+/***************** 这里定义引用的样式 ****************/
+
+blockquote {
+    border-left: 5px solid #666;
+    background-color: #303030;
+    margin-top: 0.75rem;
+    margin-left: 0.375rem;
+    margin-right: 0.375rem;
+    margin-bottom: 0.75rem;
+}
+
+blockquote p {
+    font-family: 'Times New Roman', 宋体;
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0rem;
+}
+
+
+/***************** 这里定义表格的样式 ****************/
+
+table {
+    position: relative;
+    font-family: 'Times New Roman', 宋体;
+    width: 70%;
+    left: 15%;
+    *border-collapse: collapse;
+    border-spacing: 0;
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+}
+
+table thead th {
+    border-bottom: 3px double black;
+}
+
+
+/***************** 这里定义公式的样式 ****************/
+
+/* .MathJax_Display {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+p.mathjax-block,
+.mathjax-block {
+    padding-bottom: 0;
+}
+
+.mathjax-block>.code-tooltip {
+    bottom: 5px;
+    box-shadow: none;
+} */
+
+
+/***************** 这里定义节编号的样式 ****************/
+
+#write {
+    counter-reset: h1;
+}
+
+#write h1 {
+    counter-reset: h2;
+}
+
+#write h2 {
+    counter-reset: h3;
+}
+
+#write h3 {
+    counter-reset: h4;
+}
+
+#write h4 {
+    counter-reset: h5;
+}
+
+#write h5 {
+    counter-reset: h6;
+}
+
+/** put counter result into headings */
+#write h1:before {
+    white-space: pre-wrap;
+    counter-increment: h1;
+    content: counter(h1) "   ";
+}
+
+#write h2:before {
+    white-space: pre-wrap;
+    counter-increment: h2;
+    content: counter(h1) "."counter(h2) "  "
+}
+
+#write h3:before {
+    white-space: pre-wrap;
+    counter-increment: h3;
+    content: counter(h1) "."counter(h2) "."counter(h3) "  "
+}
+
+#write h4:before {
+    white-space: pre-wrap;
+    counter-increment: h4;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "  "
+}
+
+#write h5:before {
+    white-space: pre-wrap;
+    counter-increment: h5;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "  "
+}
+
+#write h6:before {
+    white-space: pre-wrap;
+    counter-increment: h6;
+    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) "  "
+}
+
+
+/** focus on heading */
+#write>h1.md-focus:before,
+#write>h2.md-focus:before,
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before {
+    content: none;
+    /* color: red;
+    border: inherit;
+    position: inherit;
+    left: initial;
+    float: none;
+    top: initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit; */
+}
+
+
+/***************** 这里定义打印或者导出PDF的样式 ****************/
+
+@media print {
+
+    /* for example: */
+    .typora-export * {
+        -webkit-print-color-adjust: exact;
+    }
+
+    /* add styles here */
+    @page {
+        margin-top: 20mm;
+        margin-bottom: 20mm;
+        margin-left: 0mm;
+        margin-right: 0mm;
+    }
+
+    #write {
+        max-width: 100%;
+    }
+}

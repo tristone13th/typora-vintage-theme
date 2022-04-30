@@ -4,6 +4,7 @@
 - A simple and powerful three-line `table` and a beautiful, easy-to-read `task list`.
 - A concise interface with appropriate distances between objects.
 - A variety of different headings with totally 6 levels: H3 is marked in brown to distinguish it from other headers. Every `header`/`ToC item`/`outline item` is automatically enquiped with a section number to indicate the position.
+- Dark mode.
 
 > This theme had been tested under `Windows` System.
 
@@ -14,3 +15,9 @@
 ![](media/lorem_ipsum_3.png)
 
 ![](media/abstract_algebra.png)
+
+# Changelog
+
+- 2022/04/30
+
+  Add a dark theme implementation for `Vintage` named `Vintage Night`, feel free to explore.
