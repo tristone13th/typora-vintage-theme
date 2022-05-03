@@ -64,6 +64,14 @@ html {
 
 
 /************************* misc ************************/
+/* 源代码模式的按键 */
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888888;
+}
 
 ::-webkit-scrollbar-thumb {
     background-color: #888888;
@@ -332,6 +340,21 @@ hr {
 
 
 /***************** 这里定义代码的样式 ****************/
+/* xml-tag */
+#write span .cm-tag {
+	color: #ee8241;
+}
+
+/* sudo in bash */
+#write span .cm-builtin {
+	color: #ee8241;
+}
+
+/* attribute in bash */
+#write span .cm-attribute {
+	color: #f7397d;
+}
+
 #write span .cm-variable {
 	color: #eeffff;
 }
@@ -593,19 +616,25 @@ blockquote p {
 
 /***************** 这里定义表格的样式 ****************/
 
+/* 表格内的文字 */
+span .md-plain {
+    color: #aaaaaa;
+}
+
 table {
     position: relative;
     font-family: 'Times New Roman', 宋体;
+    color: #aaaaaa;
     width: 70%;
     left: 15%;
     *border-collapse: collapse;
     border-spacing: 0;
-    border-top: solid black 2px;
-    border-bottom: solid black 2px;
+    border-top: solid #777777 2px;
+    border-bottom: solid #777777 2px;
 }
 
 table thead th {
-    border-bottom: 3px double black;
+    border-bottom: 3px double #777777;
 }
 
 
