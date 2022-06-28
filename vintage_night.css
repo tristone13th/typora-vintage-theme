@@ -8,10 +8,11 @@
     --meta-content-color: #5b808d;
     /*change color of meta contents like image text or link address in markdown */
 
-    --primary-color: #428bca;
+	--focus-ring-color: #ee8241;
+    --primary-color: #ee8241;
     /* color of primary buttons */
     --primary-btn-border-color: #285e8e;
-    --primary-btn-text-color: #eeffff;
+    --primary-btn-text-color: #131313;
 
     --window-border: 1px solid #131313;
     /*border for sidebar, etc*/
@@ -28,10 +29,38 @@
     --item-hover-text-color: inherit;
     --monospace: monospace;
     /*monospace font for codes, fences*/
+
+	--select-text-bg-color: #ee8241;
 }
 
 
 /***************** 这里定义一些全局信息****************/
+/* header */
+.megamenu-opened header {
+	background-image: none;
+	background: #131313 !important;
+}
+
+/* sidebar */
+.stopselect {
+	background: #131313 !important;
+}
+
+.megamenu-content {
+	background: #131313 !important;
+}
+
+.recent-file-name {
+	background: #222222;
+}
+
+.recent-file-dir {
+	background: #222222;
+}
+
+#recent-file-panel-action-btn {
+	background: #222222;
+}
 
 html,
 body {
@@ -42,11 +71,22 @@ body {
 }
 
 #write {
-    background: #131313;
-    font-family: 'Times New Roman', 宋体;
-    font-weight: normal;
-    max-width: 55rem;
-    color: #eeffff
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
 }
 
 body {
@@ -55,11 +95,6 @@ body {
 
 html {
     font-size: 18px;
-}
-
-#write {
-    margin: auto;
-    text-align: justify;
 }
 
 
@@ -82,20 +117,8 @@ html {
 }
 
 ::selection {
-  color: #131313;
-  background: #ee8241;
-}
-
-div .long-btn {
-	color: #131313;
-}
-
-button .btn {
-	color: #131313;
-}
-
-tr {
-	color: #131313;
+  color: #131313 !important;
+  background: #ee8241 !important;
 }
 
 /***************** 这里定义水平线的样式 ****************/
@@ -177,67 +200,67 @@ hr {
     font-size: 1rem;
 }
 
-.md-toc-h1:before {
-    color: #285e8e;
-    white-space: pre-wrap;
-    counter-increment: h1toc;
-    content: counter(h1toc) "  "
-}
+/* .md-toc-h1:before { */
+/*     color: #285e8e; */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h1toc; */
+/*     content: counter(h1toc) "  " */
+/* } */
 
 .md-toc-h1 .md-toc-inner {
     margin-left: 0;
 }
 
-.md-toc-h2:before {
-    color: #285e8e;
-    white-space: pre-wrap;
-    counter-increment: h2toc;
-    content: counter(h1toc) ". "counter(h2toc) "  "
-}
+/* .md-toc-h2:before { */
+/*     color: #285e8e; */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h2toc; */
+/*     content: counter(h1toc) ". "counter(h2toc) "  " */
+/* } */
 
 .md-toc-h2 .md-toc-inner {
     margin-left: 0;
 }
 
-.md-toc-h3:before {
-    color: #285e8e;
-    white-space: pre-wrap;
-    counter-increment: h3toc;
-    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) "  "
-}
+/* .md-toc-h3:before { */
+/*     color: #285e8e; */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h3toc; */
+/*     content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) "  " */
+/* } */
 
 .md-toc-h3 .md-toc-inner {
     margin-left: 0;
 }
 
-.md-toc-h4:before {
-    color: #285e8e;
-    white-space: pre-wrap;
-    counter-increment: h4toc;
-    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) "  "
-}
+/* .md-toc-h4:before { */
+/*     color: #285e8e; */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h4toc; */
+/*     content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) "  " */
+/* } */
 
 .md-toc-h4 .md-toc-inner {
     margin-left: 0;
 }
 
-.md-toc-h5:before {
-    color: #285e8e;
-    white-space: pre-wrap;
-    counter-increment: h5toc;
-    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) ". "counter(h5toc) "  "
-}
+/* .md-toc-h5:before { */
+/*     color: #285e8e; */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h5toc; */
+/*     content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) ". "counter(h5toc) "  " */
+/* } */
 
 .md-toc-h5 .md-toc-inner {
     margin-left: 0;
 }
 
-.md-toc-h6:before {
-    color: #285e8e;
-    white-space: pre-wrap;
-    counter-increment: h6toc;
-    content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) ". "counter(h5toc) ". "counter(h6toc) "  "
-}
+/* .md-toc-h6:before { */
+/*     color: #285e8e; */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h6toc; */
+/*     content: counter(h1toc) ". "counter(h2toc) ". "counter(h3toc) ". "counter(h4toc) ". "counter(h5toc) ". "counter(h6toc) "  " */
+/* } */
 
 .md-toc-h6 .md-toc-inner {
     margin-left: 0;
@@ -340,6 +363,7 @@ hr {
 
 
 /***************** 这里定义代码的样式 ****************/
+
 /* xml-tag */
 #write span .cm-tag {
 	color: #ee8241;
@@ -383,12 +407,22 @@ hr {
 	color: #c99677;
 }
 
+/* true or false */
+#write span .cm-atom {
+	color: #c99677;
+}
+
 #write span .cm-operator {
 	color: #9cdcfe;
 }
 
 #write span .cm-number {
 	color: #b5cea8;
+}
+
+/* inline code in quote */
+.md-pair-s > code{
+	background-color: #303030 !important;
 }
 
 #write code {
@@ -401,11 +435,19 @@ hr {
     margin-right: 0.15rem;
 }
 
+.CodeMirror div.CodeMirror-cursor {
+	border-left: 1px solid #eeffff !important;
+}
+
+.CodeMirror-selectedtext {
+	color: #131313 !important;
+}
+
 #write .md-fences {
     font-family: 'UbuntuMono Nerd Font';
     color: "#eeffff";
     border: 1px solid #666;
-    background-color: #131313;
+    background-color: #222;
     border-radius: 3px;
     padding: 0;
     padding: 2px 4px 0px 4px;
@@ -457,35 +499,35 @@ hr {
     counter-reset: toch6
 }
 
-.outline-h1>.outline-item>.outline-label:before {
-    counter-increment: toch1;
-    content: counter(toch1) " "
-}
-
-.outline-h2>.outline-item>.outline-label:before {
-    counter-increment: toch2;
-    content: counter(toch1) "."counter(toch2) " "
-}
-
-.outline-h3>.outline-item>.outline-label:before {
-    counter-increment: toch3;
-    content: counter(toch1) "."counter(toch2) "."counter(toch3) " "
-}
-
-.outline-h4>.outline-item>.outline-label:before {
-    counter-increment: toch4;
-    content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) " "
-}
-
-.outline-h5>.outline-item>.outline-label:before {
-    counter-increment: toch5;
-    content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) "."counter(toch5) " "
-}
-
-.outline-h6>.outline-item>.outline-label:before {
-    counter-increment: toch6;
-    content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) "."counter(toch5) "."counter(toch6) " "
-}
+/* .outline-h1>.outline-item>.outline-label:before { */
+/*     counter-increment: toch1; */
+/*     content: counter(toch1) " " */
+/* } */
+/**/
+/* .outline-h2>.outline-item>.outline-label:before { */
+/*     counter-increment: toch2; */
+/*     content: counter(toch1) "."counter(toch2) " " */
+/* } */
+/**/
+/* .outline-h3>.outline-item>.outline-label:before { */
+/*     counter-increment: toch3; */
+/*     content: counter(toch1) "."counter(toch2) "."counter(toch3) " " */
+/* } */
+/**/
+/* .outline-h4>.outline-item>.outline-label:before { */
+/*     counter-increment: toch4; */
+/*     content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) " " */
+/* } */
+/**/
+/* .outline-h5>.outline-item>.outline-label:before { */
+/*     counter-increment: toch5; */
+/*     content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) "."counter(toch5) " " */
+/* } */
+/**/
+/* .outline-h6>.outline-item>.outline-label:before { */
+/*     counter-increment: toch6; */
+/*     content: counter(toch1) "."counter(toch2) "."counter(toch3) "."counter(toch4) "."counter(toch5) "."counter(toch6) " " */
+/* } */
 
 .outline-h4,
 .outline-h5,
@@ -508,23 +550,36 @@ hr {
 
 #write h1 {
     font-size: 1.5rem;
-    font-family: 'Hevatica', 黑体;
-    color: #eeffff;
+    font-family: 'Helvetica', 黑体;
+    color: #ffffff;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
 }
 
 #write h2 {
-    font-family: 'Hevatica', 黑体;
-    font-size: 1.2rem;
-    color: #eeffff;
+    font-family: 'Helvetica', 黑体;
+    font-size: 1rem;
+    color: #ee8241;
+    /* text-decoration:  overline; */
     margin-top: 1rem;
     margin-bottom: 0.75rem;
 }
 
+/* 分割线 horizental line */
+#write h2:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #ee8241;
+  position: absolute;
+  bottom: -.2em;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 #write h3 {
-    font-family: 'Hevatica', 黑体;
+    font-family: 'Helvetica', 黑体;
     color: #ee8241;
     font-size: 1rem;
     margin-top: 0.75rem;
@@ -534,7 +589,7 @@ hr {
 #write h4,
 #write h5,
 #write h6 {
-    font-family: 'Hevatica', 黑体;
+    font-family: 'Helvetica', 黑体;
     color: black;
     font-size: 1rem;
     margin-top: 0.5rem;
@@ -615,10 +670,13 @@ blockquote p {
 
 
 /***************** 这里定义表格的样式 ****************/
-
 /* 表格内的文字 */
-span .md-plain {
+table span .md-plain {
     color: #aaaaaa;
+}
+
+strong span {
+    color: #9cdcfe !important;
 }
 
 table {
@@ -684,64 +742,64 @@ p.mathjax-block,
 }
 
 /** put counter result into headings */
-#write h1:before {
-    white-space: pre-wrap;
-    counter-increment: h1;
-    content: counter(h1) "   ";
-}
-
-#write h2:before {
-    white-space: pre-wrap;
-    counter-increment: h2;
-    content: counter(h1) "."counter(h2) "  "
-}
-
-#write h3:before {
-    white-space: pre-wrap;
-    counter-increment: h3;
-    content: counter(h1) "."counter(h2) "."counter(h3) "  "
-}
-
-#write h4:before {
-    white-space: pre-wrap;
-    counter-increment: h4;
-    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "  "
-}
-
-#write h5:before {
-    white-space: pre-wrap;
-    counter-increment: h5;
-    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "  "
-}
-
-#write h6:before {
-    white-space: pre-wrap;
-    counter-increment: h6;
-    content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) "  "
-}
+/* #write h1:before { */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h1; */
+/*     content: counter(h1) "   "; */
+/* } */
+/**/
+/* #write h2:before { */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h2; */
+/*     content: counter(h1) "."counter(h2) "  " */
+/* } */
+/**/
+/* #write h3:before { */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h3; */
+/*     content: counter(h1) "."counter(h2) "."counter(h3) "  " */
+/* } */
+/**/
+/* #write h4:before { */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h4; */
+/*     content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "  " */
+/* } */
+/**/
+/* #write h5:before { */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h5; */
+/*     content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "  " */
+/* } */
+/**/
+/* #write h6:before { */
+/*     white-space: pre-wrap; */
+/*     counter-increment: h6; */
+/*     content: counter(h1) "."counter(h2) "."counter(h3) "."counter(h4) "."counter(h5) "."counter(h6) "  " */
+/* } */
 
 
 /** focus on heading */
-#write>h1.md-focus:before,
-#write>h2.md-focus:before,
-#write>h3.md-focus:before,
-#write>h4.md-focus:before,
-#write>h5.md-focus:before,
-#write>h6.md-focus:before {
-    content: none;
-    /* color: red;
-    border: inherit;
-    position: inherit;
-    left: initial;
-    float: none;
-    top: initial;
-    font-size: inherit;
-    padding-left: inherit;
-    padding-right: inherit;
-    vertical-align: inherit;
-    font-weight: inherit;
-    line-height: inherit; */
-}
+/* #write>h1.md-focus:before, */
+/* #write>h2.md-focus:before, */
+/* #write>h3.md-focus:before, */
+/* #write>h4.md-focus:before, */
+/* #write>h5.md-focus:before, */
+/* #write>h6.md-focus:before { */
+/*     content: none; */
+/*     /* color: red; */
+/*     border: inherit; */
+/*     position: inherit; */
+/*     left: initial; */
+/*     float: none; */
+/*     top: initial; */
+/*     font-size: inherit; */
+/*     padding-left: inherit; */
+/*     padding-right: inherit; */
+/*     vertical-align: inherit; */
+/*     font-weight: inherit; */
+/*     line-height: inherit; */ */
+/* } */
 
 
 /***************** 这里定义打印或者导出PDF的样式 ****************/
