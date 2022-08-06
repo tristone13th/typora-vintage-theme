@@ -683,12 +683,12 @@ table {
     position: relative;
     font-family: 'Times New Roman', 宋体;
     color: #aaaaaa;
-    width: 70%;
-    left: 15%;
+    width: 80%;
+    left: 10%;
     *border-collapse: collapse;
     border-spacing: 0;
-    border-top: solid #777777 2px;
-    border-bottom: solid #777777 2px;
+    border-top: solid #777777 3px;
+    border-bottom: solid #777777 3px;
 }
 
 table thead th {
